@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tweet Box</title>
+        https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+       <div class="container">
+           <div class="jumbotron">
+            <div id="tweet-box">
+                <h3>{{title}}</h3>
+                <textarea class="form-control" v-model="text"></textarea>
+                <span>{{140 - text.length}}</span><br>
+                <button :disabled="text.length===0" class="btn btn-primary pull-right">Tweet</button>
+            </div>
+            </div>
+       </div>
+        https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.js
+        <script src="app.js"></script>
+    </body>
+</html>
